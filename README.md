@@ -10,6 +10,12 @@
 ### Scehma
 Schema is set in `models/mongo.js`
 
+### DB and Collection
+The db and collection are set in `models/mongo.js`
+
+### Port
+The port is set in `server.js` default is set to `4444`
+
 ### Run
 `npm start` - starts server at `http://localhost:4444/`
 

@@ -1,5 +1,6 @@
 var mongoose = require("mongoose"),
-    db       = 'patients';
+    db       = 'patients',
+    col      = 'docs';
 
 mongoose.connect('mongodb://localhost:27017/'+db);
 var mongoSchema   = mongoose.Schema,
@@ -29,5 +30,4 @@ var mongoSchema   = mongoose.Schema,
     "safetyReportId" : String,
     "companyNumber" : String
 };
-module.exports = mongoose.model('docs',patientSchema);
-
+module.exports = mongoose.model(col, patientSchema);

@@ -18,7 +18,7 @@ Download and run this repo for a UI [https://github.com/peteplays/angular-bootst
 
 ### Calls
 | Description | Url | Call | Params |
-| ------- | --------- |
+| ----------- | --- | ---- | ------ |
 | Check Mongo is up and running | / | GET | none |
 | Get a single patient record | /getPatient/:patientId` | GET | :patientId |
 | Return all records| getAll | GET | none |

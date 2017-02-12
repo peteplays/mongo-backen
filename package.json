@@ -1,0 +1,20 @@
+{
+  "name": "mongo-backend",
+  "version": "1.0.0",
+  "description": "mongodb service",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peteplays/mongo-backend"
+  },
+  "author": "PetePlays",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "mongoose": "^4.1.2"
+  }
+}

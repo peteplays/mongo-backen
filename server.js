@@ -79,19 +79,19 @@ router.route("/updatePatient/")
         });
     });
 
-    router.route("/addPatient/")
-        .post(function(req,res){
-          var patient  = mongoOp(req.body),
-              response = {};
-                patient.save(function(err, data) {
-                if(err) {
-                    response = {"status" : "error", "error" : err};
-                } else {
-                    response = {"status" : "ok", "data" : data};
-                }
-                res.json(response);
-            });
+router.route("/addPatient/")
+    .post(function(req,res){
+      var patient  = mongoOp(req.body),
+          response = {};
+            patient.save(function(err, data) {
+            if(err) {
+                response = {"status" : "error", "error" : err};
+            } else {
+                response = {"status" : "ok", "data" : data};
+            }
+            res.json(response);
         });
+    });
 
 router.route("/count")
     .get(function(req,res){

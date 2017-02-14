@@ -22,7 +22,6 @@ router.route("/getPatient/:patientId")
         var response = {},
             patientId = req.params.patientId,
             find = {"_id" : patientId};
-
         mongoOp.findOne(find,function(err,data){
             if(err) {
                 response = {"status" : "error", "error" : err};
@@ -32,6 +31,20 @@ router.route("/getPatient/:patientId")
             res.json(response);
         });
     });
+
+    router.route("/deletePatient/:patientId")
+        .get(function(req,res){
+            var response = {},
+                patientId = req.params.patientId;
+            mongoOp.findByIdAndRemove(patientId,function(err,data){
+                if(err) {
+                    response = {"status" : "error", "error" : err};
+                } else {
+                    response = {"status" : "ok", "data" : data};
+                }
+                res.json(response);
+            });
+        });
 
 router.route("/getAll")
     .get(function(req,res){

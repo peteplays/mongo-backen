@@ -7,7 +7,7 @@
 
 ## Usage
 
-### Scehma
+### Schema
 Schema is set in `models/mongo.js`
 
 ### DB and Collection
